@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+      #menu{
+        display: none;
+      }
+      #toogle_f{
+        display: none;
+      }
+      .my_home{
+        margin: 0 !important;
+        background-color: rgb(230, 217, 210);
+      }
+      .main_header{
+        justify-content: space-between;
+        display: flex;          
+      }
+      .main_header1{
+        padding: 0 20px;          
+      }
+      .footer {
+          position: absolute;
+          bottom: 0;
+          z-index: 999;
+
+      }
+      .body_content{
+          text-align: center;
+          height: 85%;
+          width: 100%;
+          display: flex;
+      }
+      .header{
+
+          width: 100%;
+          justify-content: space-between;
+          /*display: flex;*/
+      }
+      .disable{
+            opacity: 0.5;
+      }
+      .enable{
+            opacity: 1;
+      }
+      .split {
+        width: 50%;
+        position: fixed;
+        z-index: 1;
+        padding-top: 20px;
+        height: 85%;
+      }
+      .full{
+        width: 100%;
+      }
+      .half{
+        width: 70%;
+      }
+      .half_3{
+        width: 30%;
+      }
+      /* Control the left side */
+      .left {
+        left: 0;
+        /*background-color: #111;*/
+      }
+
+      /* Control the right side */
+      .right {
+
+        right: 0;
+        border-left-width: initial;
+        border-left-style: solid;
+        border-left-color: initial;
+        /*background-color: red;*/
+      }
+      .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+
+      /* Style the image inside the centered container, if needed */
+      .centered img {
+        width: 150px;
+        border-radius: 50%;
+      }
+      @media only screen and (max-width: 730px){
+        #menu{
+          display: flex;
+        }
+        #toogle_f{
+          display: flex;
+        } 
+        .centered {
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-align: center;
+        }
+        .main_header{
+          display: flex;
+          justify-content: space-between;
+        }
+        .header{
+          flex-direction: column;
+          display: flex;
+          width: 8%;
+          justify-content: space-between;
+          display: none;
+        }
+        .footer{
+          display: flex;
+          flex-direction: column;
+          width: 27%;
+          bottom: 45px;
+          position: absolute;
+          display: none;
+          z-index: 999;
+        }
+        .split{
+          position: fixed;
+          z-index: 1;
+          height: auto;
+          height: 85%;
+
+        }
+        .full{
+          width: 100%;
+        }
+        .half{
+          width: 0;
+          display: none;
+        }
+        .half_3{
+          width: 100%;
+        }
+        /* Control the left side */
+        .left {
+          left: 0;
+          /*background-color: #111;*/
+        }
+
+        /* Control the right side */
+        .right {
+
+          right: 0;
+          border-left-width: initial;
+          border-left-style: solid;
+          border-left-color: initial;
+          /*background-color: red;*/
+        }
+        .hom_img{
+          width: 150%;
+        }
+        .main_footer{
+          position: absolute;
+          bottom: 5px;
+        }
+
+      }
+                        
+      </style>
+      <script type="text/javascript">
+        function hover(element) {
+          // console.log(element.src);
+          var url = element.src;
+          url = url.replace('-s.svg','-h.svg');
+          // console.log(url);
+          element.setAttribute('src', url);
+        }
+        function unhover(element) {
+          var url = element.src;
+          url = url.replace('-h.svg','-s.svg');
+          element.setAttribute('src', url);
+        }
+        function clicked(element){
+          
+          var url = element.src;
+
+          if(url.includes('-h.svg')){
+              url = url.replace('-h.svg','-a.svg');
+              element.setAttribute('src', url);
+
+              if(element.id == "kenmerken"){
+                $("#right").show();
+                $("#left").removeClass('full');
+                $("#left").addClass('half');
+                $("#right").removeClass('full');
+                $("#right").addClass('half_3');
+              }
+              
+          }
+          else {
+              url = url.replace('-a.svg','-h.svg');
+              element.setAttribute('src', url);
+              if(element.id == "kenmerken"){
+                $("#right").hide();
+                $("#left").removeClass('half');
+                $("#left").addClass('full');
+                $("#right").removeClass('half_3');
+                $("#right").addClass('full');
+              }
+          };
+        }
+        function ondiv(element){
+          jQuery('div img').removeClass("disable");
+          jQuery('div img').addClass("enable");
+           // jQuery(this).addClass("active");
+        }
+        function outdiv(element){
+          jQuery('div img').removeClass("enable");
+          jQuery('div img').addClass("disable");
+        }
+        function menu(element){
+          
+          if(jQuery('.header').is(":visible")){
+            jQuery('.header').hide();
+          }
+          else jQuery('.header').show();
+        }
+        function footer_menu(element){
+          if(jQuery('.footer').is(":visible")){
+            jQuery('.footer').hide();
+          }
+          else jQuery('.footer').show();
+
+        }
+        $(window).on('resize' , function() {
+           
+                if ($(window).width() > 730) {
+                    jQuery('.header').show();
+                    jQuery('.footer').show();
+                }
+                if ($(window).width() < 730 && $(window).width() >725) {
+                    jQuery('.header').hide();
+                    jQuery('.footer').hide();
+                }
+               
+                
+        });
+        jQuery(document).ready(function(){
+            jQuery('div img').addClass("disable");
+            $("#right").hide();
+            $("#left").removeClass('half');
+            $("#left").addClass('full');
+         });
+      </script>
+  </head>
+  <body class="my_home">
+    
+    <div class="main_content">
+      <div class="main_header">
+        <div class="main_head">
+          <div class="home_menu">
+              <img id = "menu" src = "./svg/ilnausre-s.svg" alt="menu" onmouseover="hover(this)" onmouseout="unhover(this)" onclick="menu(this)" />  
+          </div>
+
+          <div class="header" onmouseover="ondiv(this)" onmouseout="outdiv(this)">
+            <img class="hom_img" id = "overzicht" src = "./svg/vhevansi-s.svg" alt="overzicht" onmouseover="hover(this)" onmouseout="unhover(this)" onclick="clicked(this)"  />
+            <img class="hom_img" id = "ontwerp" src = "./svg/ketebaru-s.svg" alt="ontwerp" onmouseover="hover(this)" onmouseout="unhover(this)" onclick="clicked(this)" />
+            <img class="hom_img" id = "opstelling" src = "./svg/vekosoer-s.svg" alt="opstelling" onmouseover="hover(this)" onmouseout="unhover(this)" onclick="clicked(this)" />
+            <img class="hom_img" id = "module" src = "./svg/hulaohci-s.svg" alt="module" onmouseover="hover(this)" onmouseout="unhover(this)" onclick="clicked(this)" />
+            <img class="hom_img" id = "corpus" src = "./svg/rorevsak-s.svg" alt="corpus" onmouseover="hover(this)" onmouseout="unhover(this)" onclick="clicked(this)" />
+            <img class="hom_img" id = "indeling" src = "./svg/lakanviu-s.svg" alt="indeling" onmouseover="hover(this)" onmouseout="unhover(this)" onclick="clicked(this)" />
+            <img class="hom_img" id = "front" src = "./svg/zahipasw-s.svg" alt="front" onmouseover="hover(this)" onmouseout="unhover(this)" onclick="clicked(this)" />
+          </div>
+        </div>
+
+        
+        <div class="main_header1">
+          <h1 style="color: red;">338.34$</h1>  
+        </div>  
+      </div>
+      
+      
+    
+      <div class = "body_content">
+        <div id = 'left' class="split left">
+          <div class="centered">
+            <img src="test.png" alt="Avatar woman">
+          </div>
+        </div>
+
+        <div  id = 'right' class="split right">
+          <div class="centered">
+            <form action="">
+              <label for="fname">First name:</label><br>
+              <input type="text" id="fname" name="fname" value="John"><br>
+              <label for="lname">Last name:</label><br>
+              <input type="text" id="lname" name="lname" value="Doe"><br><br>
+              <input type="submit" value="Submit">
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="main_footer">
+        <div class="footer" onmouseover="ondiv(this)" onmouseout="outdiv(this)">
+          <img id = "animate" src = "./svg/docaurwr-s.svg" alt="animate" onmouseover="hover(this)" onmouseout="unhover(this)" onclick="clicked(this)" />
+          <img  id = "transparent" src = "./svg/erhnuqhp-s.svg" alt="transparent" onmouseover="hover(this)" onmouseout="unhover(this)" onclick="clicked(this)" />
+          <img id = "deyren_open" src = "./svg/lofvacta-s.svg" alt="deyren open" onmouseover="hover(this)" onmouseout="unhover(this)" onclick="clicked(this)" />
+          <img id = "kenmerken"  src = "./svg/lanrejde-s.svg" alt="kenmerken" onmouseover="hover(this)" onmouseout="unhover(this)" onclick="clicked(this)" />
+        </div> 
+        <div>
+          <img id = "toogle_f"  src = "./svg/ytdegzdp-s.svg" alt="" onmouseover="hover(this)" onmouseout="unhover(this)" onclick="footer_menu(this)" />
+        </div>
+        
+      </div>
+      
+      
+      
+
+    </div>
+  
+</html>
