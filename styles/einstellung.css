@@ -1,0 +1,137 @@
+@font-face {
+  font-family: 'NeueEinstellung';
+  src: url('/resources/font/NeueEinstellung-Normal.eot'),
+        url('/resources/font/NeueEinstellung-Normal.eot?#iefix') format('embedded-opentype'),
+        url('/resources/font/NeueEinstellung-Normal.woff2') format('woff2'),
+        url('/resources/font/NeueEinstellung-Normal.woff') format('woff'),
+        url('/resources/font/NeueEinstellung-Normal.ttf')  format('truetype')
+}
+
+@font-face {
+	font-family:'NeueEinstellung';
+	font-style:normal;
+	font-weight:normal;
+	src:local('☺'), 
+    url("/resources/font/NeueEinstellung-Normal.woff2") format("woff2"), 
+    url("/resources/font/NeueEinstellung-Normal.woff") format("woff"), 
+    url("/resources/font/NeueEinstellung-Normal.eot") format("eot"), 
+    url("/resources/font/NeueEinstellung-Normal.ttf") format("truetype");
+}
+@font-face {
+	font-family:'NeueEinstellung';
+	font-style:normal;
+	font-weight:bold;
+	src:local('☺'), 
+    url("/resources/font/NeueEinstellung-SemiBold.woff2") format("woff2"), 
+    url("/resources/font/NeueEinstellung-SemiBold.woff") format("woff"), 
+    url("/resources/font/NeueEinstellung-SemiBold.eot") format("eot"), 
+    url("/resources/font/NeueEinstellung-SemiBold.ttf") format("truetype");
+}
+@font-face {
+	font-family:'NeueEinstellung';
+	font-style:normal;
+	font-weight:100;
+	src:local('☺'), 
+    url("/resources/font/NeueEinstellung-Thin.woff2") format("woff2"), 
+    url("/resources/font/NeueEinstellung-Thin.woff") format("woff"), 
+    url("/resources/font/NeueEinstellung-Thin.eot") format("eot"), 
+    url("/resources/font/NeueEinstellung-Thin.ttf") format("truetype");
+}
+@font-face {
+	font-family:'NeueEinstellung';
+	font-style:normal;
+	font-weight:200;
+	src:local('☺'), 
+    url("/resources/font/NeueEinstellung-Light.woff2") format("woff2"), 
+    url("/resources/font/NeueEinstellung-Light.woff") format("woff"), 
+    url("/resources/font/NeueEinstellung-Light.eot") format("eot"), 
+    url("/resources/font/NeueEinstellung-Light.ttf") format("truetype");
+}
+@font-face {
+	font-family:'NeueEinstellung';
+	font-style:normal;
+	font-weight:300;
+	src:local('☺'), 
+    url("/resources/font/NeueEinstellung-Normal.woff2") format("woff2"), 
+    url("/resources/font/NeueEinstellung-Normal.woff") format("woff"), 
+    url("/resources/font/NeueEinstellung-Normal.eot") format("eot"), 
+    url("/resources/font/NeueEinstellung-Normal.ttf") format("truetype");
+}
+@font-face {
+	font-family:'NeueEinstellung';
+	font-style:normal;
+	font-weight:400;
+	src:local('☺'), 
+    url("/resources/font/NeueEinstellung-Regular.woff2") format("woff2"), 
+    url("/resources/font/NeueEinstellung-Regular.woff") format("woff"), 
+    url("/resources/font/NeueEinstellung-Regular.eot") format("eot"), 
+    url("/resources/font/NeueEinstellung-Regular.ttf") format("truetype");
+}
+@font-face {
+	font-family:'NeueEinstellung';
+	font-style:normal;
+	font-weight:500;
+	src:local('☺'), 
+    url("/resources/font/NeueEinstellung-Medium.woff2") format("woff2"), 
+    url("/resources/font/NeueEinstellung-Medium.woff") format("woff"), 
+    url("/resources/font/NeueEinstellung-Medium.eot") format("eot"), 
+    url("/resources/font/NeueEinstellung-Medium.ttf") format("truetype");
+}
+@font-face {
+	font-family:'NeueEinstellung';
+	font-style:normal;
+	font-weight:600;
+	src:local('☺'), 
+    url("/resources/font/NeueEinstellung-SemiBold.woff2") format("woff2"), 
+    url("/resources/font/NeueEinstellung-SemiBold.woff") format("woff"), 
+    url("/resources/font/NeueEinstellung-SemiBold.eot") format("eot"), 
+    url("/resources/font/NeueEinstellung-SemiBold.ttf") format("truetype");
+}
+@font-face {
+	font-family:'NeueEinstellung';
+	font-style:normal;
+	font-weight:700;
+	src:local('☺'), 
+    url("/resources/font/NeueEinstellung-ExtraBold.woff2") format("woff2"), 
+    url("/resources/font/NeueEinstellung-ExtraBold.woff") format("woff"), 
+    url("/resources/font/NeueEinstellung-ExtraBold.eot") format("eot"), 
+    url("/resources/font/NeueEinstellung-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+	font-family:'NeueEinstellung';
+	font-style:normal;
+	font-weight:800;
+	src:local('☺'), 
+    url("/resources/font/NeueEinstellung-Black.woff2") format("woff2"), 
+    url("/resources/font/NeueEinstellung-Black.woff") format("woff"), 
+    url("/resources/font/NeueEinstellung-Black.eot") format("eot"), 
+    url("/resources/font/NeueEinstellung-Black.ttf") format("truetype");
+}
+@font-face {
+	font-family:'NeueEinstellung';
+	font-style:normal;
+	font-weight:900;
+	src:local('☺'), 
+    url("/resources/font/NeueEinstellung-Black.woff2") format("woff2"), 
+    url("/resources/font/NeueEinstellung-Black.woff") format("woff"), 
+    url("/resources/font/NeueEinstellung-Black.eot") format("eot"), 
+    url("/resources/font/NeueEinstellung-Black.ttf") format("truetype");
+}
+
+html,
+body {
+    height: 100%;
+    font-family: 'NeueEinstellung';
+    margin: 0px;
+    padding: 0px;
+    background-color: #F0F0F0;
+    box-sizing: border-box;
+    overflow: hidden;
+    color: #474747;
+}
+
+input, select, label {
+    font-family: 'NeueEinstellung', sans-serif;
+    /* font-size: 15px; */
+    /* font-weight: 400; */
+}
